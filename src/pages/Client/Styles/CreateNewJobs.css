@@ -1,0 +1,153 @@
+/* Styles/CreateNewJobs.css */
+
+/* Container for the introductory text */
+.intro-container {
+    max-width: 100%;
+    margin: auto;
+    text-align: left;
+    
+    background-color: #fff;
+}
+
+.intro-text {
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(60, 60, 60);
+    margin-top: 2px;  /* Adjusted margin for space below the logo */
+    margin-bottom: 36px;
+    text-align: left;
+    padding: 20px;
+    
+}
+
+/* Main form container */
+.page-container {
+    max-width: 800px;
+    margin: 40px 0 0 80px;
+    text-align: left;
+}
+
+/* Form Heading Style */
+.page-container h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* Form container styles */
+.create-job-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    
+}
+
+/* Label styles */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(60, 60, 60);
+}
+
+/* All input styles */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    box-sizing: border-box;
+}
+
+/* Smaller inputs */
+.small-input {
+    width: 50% !important;
+    
+}
+
+/* Textarea styles */
+textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+/* Button group */
+.button-group {
+    padding: 60px 0 0 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+/* Buttons */
+.post-button,
+.cancel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.post-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.cancel-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.post-button:hover {
+    background-color: #218838;
+}
+
+.cancel-button:hover {
+    background-color: #c82333;
+}
+
+.success-message {
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 5px;
+    position: fixed; /* Change to fixed to keep it on the screen */
+    top: 50%; /* Position vertically in the center */
+    left: 50%; /* Position horizontally in the center */
+    transform: translate(-50%, -50%); /* Offset by half its width and height to center */
+    z-index: 10;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInOut 5s ease-in-out;
+}
+
+/* Animation for fading out */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+

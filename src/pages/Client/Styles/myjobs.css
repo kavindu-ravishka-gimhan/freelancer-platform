@@ -1,0 +1,132 @@
+/* Main Dashboard Container */
+.dashboard-container {
+  padding-left: 20px !important;  /* Align content to the left */
+}
+
+/* Dashboard Title */
+.dashboardtitle {
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(60, 60, 60);
+  margin-top: 20px !important;  /* Adjusted margin for space below the logo */
+  margin-bottom: 36px;
+  text-align: left !important;
+}
+
+/* Job List Styles */
+.job-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Individual Job Card */
+.job-card {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 20px;
+  width: 35%;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Job Title */
+.job-card h2 {
+  margin-bottom: 12px;
+  color: #28a745;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Job Information */
+.job-card p {
+  margin: 8px 0;
+  text-align: left;
+  color: #515050;
+}
+
+.job-card p strong {
+  color: rgb(60, 60, 60);  /* Set color to black for the labels */
+}
+
+/* Job Actions (Buttons) */
+.job-actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Action Buttons Style */
+.job-actions button {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 15px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Action Buttons Hover Effect */
+.job-actions button:hover {
+  background-color: #218838;
+}
+
+/* Modal Styles for Delete Confirmation */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
+}
+
+/* Modal Action Buttons */
+.modal-actions {
+  margin-top: 20px;
+}
+
+.cancel-btn, .confirm-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Cancel Button Style */
+.cancel-btn {
+  background-color: #ccc;
+}
+
+/* Confirm Button Style */
+.confirm-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Modal Close (when not open) */
+.modal-content h3 {
+  font-size: 18px;
+  color: #333;
+}

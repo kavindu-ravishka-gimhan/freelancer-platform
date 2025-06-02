@@ -1,0 +1,215 @@
+.admin-dashboard-container {
+  padding: 2rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.admin-title {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #3B82F6 !important;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title-icon {
+  font-size: 2.2rem;
+  color: #3B82F6;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.admin-stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-stat-card.total-users { border-color: #3B82F6; }
+.admin-stat-card.freelancers { border-color: #10B981; }
+.admin-stat-card.clients { border-color: #6366F1; }
+
+.stat-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: #eef2ff;
+  border-radius: 0.75rem;
+  color: #3B82F6;
+}
+
+.admin-stat-card.freelancers .stat-icon {
+  background-color: #d1fae5;
+  color: #10B981;
+}
+
+.admin-stat-card.clients .stat-icon {
+  background-color: #e0e7ff;
+  color: #6366F1;
+}
+
+.admin-stat-card h3 {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.admin-stat-card p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.admin-chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.chart-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container h3 {
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.admin-users-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.admin-users-section h2 {
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.admin-table-wrapper {
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.admin-users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.admin-users-table th,
+.admin-users-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+}
+
+.admin-users-table th {
+  background-color: #3B82F6;
+  color: white;
+  font-weight: 500;
+}
+
+.admin-users-table td {
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+.admin-users-table tr:hover {
+  background-color: #f8fafc;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.role-badge.freelancer {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.role-badge.client {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.admin-error {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.admin-loading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #64748b;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.admin-empty {
+  text-align: center;
+  padding: 2rem;
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .admin-chart-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-title {
+    font-size: 2rem;
+  }
+  
+  .admin-stat-card p {
+    font-size: 1.75rem;
+  }
+}

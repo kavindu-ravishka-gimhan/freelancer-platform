@@ -1,0 +1,157 @@
+/* Main Container */
+.freelancers-dashboard-container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Heading Styles */
+.freelancers-main-heading {
+  text-align: left;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  color: #10B981 !important;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Ftitle-icon {
+  font-size: 2.2rem;
+  color: #10B981 !important;
+}
+
+/* Loading State */
+.freelancers-loading-status {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Charts Grid */
+.freelancers-charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Chart Cards */
+.freelancers-chart-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.freelancers-chart-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.freelancers-chart-title {
+  margin: 0 0 1.5rem 0;
+  color: #34495e;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Total Freelancers Card */
+.total-freelancers-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.freelancers-total-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #10B981;
+  background: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Table Styles */
+.freelancers-table-wrapper {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.freelancers-table-heading {
+  margin-bottom: 1.5rem;
+  color: #1e6d2e;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.freelancer-profile-image {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e2e8f0;
+  transition: transform 0.2s ease;
+}
+
+.freelancer-profile-image:hover {
+  transform: scale(1.1);
+}
+
+/* Skills Badges */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-badge {
+  background-color: #D1FAE5;
+  color: #065F46;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Delete Button */
+.Afreelancer-delete-action-btn {
+  background: #EF4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  width: 100%;
+}
+
+.Afreelancer-delete-action-btn:hover {
+  background: #DC2626;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+}
+
+/* Keep existing shared table styles from Clients.css */

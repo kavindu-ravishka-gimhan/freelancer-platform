@@ -1,0 +1,182 @@
+.ap-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f6fa;
+    position: relative;
+}
+
+/* Sidebar */
+.ap-sidebar {
+    background: #ffffff;
+    color: #2c3e50;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    border-right: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+/* Collapsed and Expanded widths */
+.ap-sidebar.collapsed {
+    width: 80px;
+}
+
+.ap-sidebar.expanded {
+    width: 260px;
+}
+
+/* Sidebar Header */
+.ap-sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Logo size and transition */
+.ap-sidebar-logo {
+    width: 60px;
+    height: auto;
+    transition: width 0.3s ease;
+}
+
+.ap-sidebar-logo.expanded {
+    width: 120px;
+}
+
+/* Menu Items */
+.ap-sidebar-menu {
+    flex: 1;
+    margin-top: 30px;
+}
+
+.ap-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    color: #4a5568;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    margin: 6px 10px;
+}
+
+.ap-menu-item:hover {
+    background: rgba(52, 152, 219, 0.08);
+    color: #3498db;
+    transform: translateX(4px);
+}
+
+.ap-menu-item.active {
+    background: rgba(52, 152, 219, 0.12);
+    color: #3498db;
+    font-weight: 500;
+    box-shadow: inset 3px 0 0 #3498db;
+}
+
+.ap-menu-item svg {
+    margin-right: 12px;
+    font-size: 1.1rem;
+    min-width: 24px;
+}
+
+/* Hide label if sidebar is collapsed */
+.ap-sidebar.collapsed .ap-menu-item span,
+.ap-sidebar.collapsed .ap-logout-btn span {
+    display: none;
+}
+
+/* Footer (Logout) */
+.ap-sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid rgba(44, 62, 80, 0.08);
+}
+
+.ap-logout-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    color: #4a5568;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.ap-logout-btn:hover {
+    background: rgba(231, 76, 60, 0.08);
+    color: #e74c3c;
+    transform: translateX(4px);
+}
+
+.ap-logout-btn svg {
+    margin-right: 12px;
+    font-size: 1.1rem;
+}
+
+/* Main Content */
+.ap-main-content {
+    margin-left: 80px;
+    padding: 30px;
+    width: 100%;
+    transition: margin-left 0.3s ease;
+    min-height: 100vh;
+}
+
+.ap-main-content.with-sidebar {
+    margin-left: 260px;
+}
+
+.ap-main-content.with-collapsed-sidebar {
+    margin-left: 80px;
+}
+
+.ap-main-content h1 {
+    color: #2c3e50;
+    margin-bottom: 35px;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+/* Stats Grid */
+.ap-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+.ap-stat-card {
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ap-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+
+.ap-stat-card h3 {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.ap-stat-card p {
+    font-size: 2rem;
+    color: #3498db;
+    font-weight: 700;
+}

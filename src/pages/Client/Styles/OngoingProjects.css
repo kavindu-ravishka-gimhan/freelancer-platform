@@ -1,0 +1,275 @@
+.projectscontainer {
+  font-family: Arial, sans-serif;
+  
+}
+
+.introtex {
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(60, 60, 60);
+  margin-top: 2px;
+  margin-bottom: 36px;
+  text-align: left !important;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.project-wrapper {
+  max-width: 80%;
+  margin: 0 auto 40px;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  margin-bottom: 5px;
+  background-color: #ffffff;
+  border-radius: 5px 5px 0 0;
+  text-align: left;
+}
+
+.project-title,
+.project-id {
+  font-size: 17px;
+  color: rgb(60, 60, 60);
+  font-weight: 400;
+}
+
+.project-card {
+  border: 2px solid #28a745;
+  border-radius: 10px;
+  padding: 0;
+  background: #f9f9f9;
+  margin-bottom: 30px;
+}
+
+.project-details {
+  display: flex;
+  justify-content: space-between;
+  text-align: stretch;
+  font-size: 17px;
+  font-weight: 400;
+  border-top: 1px solid #28a745;
+  border-bottom: 1px solid #28a745;
+  height: 50px;
+}
+
+.project-details > div {
+  flex: 1;
+  padding: 15px 10px;
+  border-right: 1px solid #28a745;
+  border-width: 2px;
+  height: 20px;
+  font-weight: 400;
+}
+
+.project-details > div:last-child {
+  border-right: none;
+  display: flex;
+}
+
+.status {
+  display: flex;
+  font-weight: 400;
+  gap: 10px;
+  align-items: center;
+}
+
+.stlable {
+  color: rgb(60, 60, 60);
+}
+
+.status-text {
+  font-weight: 500;
+}
+
+.status-text.status-completed {
+  color: green;
+}
+
+.status-text.status-in-progress {
+  color: rgb(20, 20, 202);
+}
+
+.status-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.status-completed .status-circle {
+  background-color: green;
+}
+
+.status-in-progress .status-circle {
+  background-color: blue;
+}
+
+.uploaded-work {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 10px 0;
+  gap: 17px;
+  color: rgb(60, 60, 60);
+}
+
+.uploaded-work a {
+  color: #fbfbfb;
+  text-decoration: none;
+  background-color: #28a745;
+  padding: 5px 5px;
+  border-radius: 5px;
+  font-weight: 400;
+}
+
+.uploaded-work a:hover {
+  text-decoration: none;
+}
+
+.actions-inline {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+  padding-top: 19px !important;
+}
+
+.action-label {
+  margin-right: 10px;
+  font-weight: 500;
+  color: #333;
+  padding-top: 8px;
+}
+
+.action-button {
+  display: flex;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  transition: background-color 0.3s;
+  width: 150px;
+  height: 30px;
+  align-items: center !important;
+  font-weight: 400;
+}
+
+.action-button:hover {
+  background-color: #1d7932;
+}
+
+.error-message {
+  color: red;
+  background-color: #ffe5e5;
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.confirmation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.confirmation-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+  max-width: 600px;
+  transform: scale(0.95);
+  animation: scaleUp 0.3s ease-out forwards;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.conbutton, .cancbutton {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex: 1;
+  max-width: 150px;
+}
+
+.conbutton {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+  box-shadow: 0 3px 8px rgba(76,175,80,0.3);
+}
+
+.cancbutton {
+  background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+  color: white;
+  box-shadow: 0 3px 8px rgba(255,68,68,0.3);
+}
+
+.conbutton:hover, .cancbutton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.star {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star.filled {
+  color: gold;
+}
+
+.review-input {
+  width: 100%;
+  height: 80px;
+  resize: none;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  to { transform: scale(1); }
+}

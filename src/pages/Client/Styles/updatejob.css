@@ -1,0 +1,96 @@
+.update-job-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.intro-text {
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(60, 60, 60);
+    margin-top: 2px;  /* Adjusted margin for space below the logo */
+    margin-bottom: 36px;
+    text-align: left;
+    padding: 20px;
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(60, 60, 60);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    box-sizing: border-box;
+}
+
+/* Custom width styles */
+.title-input {
+    width: 50% !important;
+}
+
+.budget-input {
+    width: 50% !important;
+}
+select {
+    width: 50% !important;
+}
+.deadline-input {
+    width: 50% !important;
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.button-group {
+    padding: 50px 0 0 0;
+    display: flex;
+    justify-content: left;
+    gap: 100px;
+}
+
+.post-button,
+.cancel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.post-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.cancel-button {
+    background-color: #c82333;
+    color: white;
+}
+
+.post-button:hover {
+    background-color: #218838;
+}
+
+.cancel-button:hover {
+    background-color: #d13939;
+}

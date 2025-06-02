@@ -1,0 +1,67 @@
+
+.intro-container {
+  max-width: 100%;
+  margin: auto;
+  text-align: center; 
+  padding: 0;
+  background-color: #fff;
+}
+
+.intro-text {
+  font-size: 28px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(60, 60, 60); 
+  margin-top: 10px;  /* ↓ Pushes it closer to top */
+  margin-bottom: 20px; /* ↓ Reduces gap below */
+}
+
+
+.sign-in-container {
+  max-width: 400px;
+  margin: auto;
+  text-align: center; 
+  padding: -10rem;
+  border-radius: 40px;
+  background-color: #fff;
+  
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif; 
+  font-size: 1.8rem; 
+  font-weight: 600;
+  color: gray; 
+}
+
+input {
+  width: 100% !important;
+  padding: 14px 20px !important;
+  margin: 10px 0 !important;
+  border: 1px solid gray !important; /* green border */
+  border-radius: 999px !important; /* pill shape */
+  box-sizing: border-box !important;
+  background-color: #f5f5f5 !important; /* light gray */
+  color: #333 !important;
+  
+}
+
+button {
+  width: 30%; /* wider button */
+  padding: 12px;
+    background-color: #028402; /* Green background by default */
+    
+  color: white;
+  border: none;
+  border-radius: 40px; /* more curve */
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+a {
+  color: #007bff;
+}

@@ -1,0 +1,140 @@
+.cproj-container {
+    font-family: Arial, sans-serif;
+}
+
+.cproj-intro-text {
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(60, 60, 60);
+    margin-top: 2px;
+    margin-bottom: 36px;
+    text-align: left;
+    padding: 20px;
+}
+
+.cproj-wrapper {
+    max-width: 80%;
+    margin: 0 auto 40px;
+}
+
+.cproj-no-projects {
+    text-align: center;
+    color: #888;
+    font-size: 16px;
+}
+
+.cproj-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    margin-bottom: 5px;
+    background-color: #ffffff;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+}
+
+.cproj-title,
+.cproj-id {
+    font-size: 17px;
+    color: rgb(60, 60, 60);
+    font-weight: 400;
+}
+
+.cproj-card {
+    border-radius: 10px;
+    background: #f9f9f9;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.cproj-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    font-weight: 400;
+    border: 3px solid #28a745;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.cproj-details > div {
+    flex: 1;
+    padding: 15px 10px;
+    border-right: 3px solid #28a745;
+    height: 20px;
+}
+
+.cproj-details > div:last-child {
+    border-right: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.cproj-status {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.cproj-label {
+    color: rgb(60, 60, 60);
+    text-align: left;
+}
+
+.cproj-label2 {
+    color: rgb(60, 60, 60);
+}
+
+.cproj-status-label {
+    color: rgb(60, 60, 60);
+    font-weight: 500;
+    text-align: left;
+    padding-top: 11px;
+}
+
+.cproj-status-text {
+    font-weight: 500;
+}
+
+.cproj-status-text.cproj-completed {
+    color: rgb(60, 60, 60);
+}
+
+.cproj-status-text.cproj-in-progress {
+    color: rgb(20, 20, 202);
+}
+
+.cproj-deadline-overdue {
+    color: red;
+}
+
+.cproj-action-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    transition: background-color 0.3s;
+    width: 150px;
+    height: 30px;
+    font-weight: 400;
+    text-align: center;
+
+    /* Add this line to push it slightly down */
+    margin-top: 5px;
+}
+
+.cproj-action-btn:hover {
+    background-color: #1d7932;
+}
+
+.cproj-file-input {
+    display: none;
+}

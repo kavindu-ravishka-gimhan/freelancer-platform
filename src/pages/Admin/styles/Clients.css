@@ -1,0 +1,189 @@
+/* Main Container */
+.clients-dashboard-container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Heading Styles */
+.clients-main-heading {
+  text-align: left;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  color: #4e79a7 !important;
+  font-weight: 600;
+  
+}
+.Ctitle-icon {
+  font-size: 2.2rem;
+  color: #4e79a7 !important;
+}
+
+/* Loading State */
+.clients-loading-status {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Charts Grid */
+.clients-charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Chart Cards */
+.clients-chart-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.clients-chart-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.clients-chart-title {
+  margin: 0 0 1.5rem 0;
+  color: #34495e;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Total Clients Card */
+.total-clients-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.clients-total-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4e79a7;
+  background: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Table Styles */
+.clients-table-wrapper {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.admin-table-wrapper {
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  margin-top: 1rem;
+}
+
+.admin-users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.admin-users-table th,
+.admin-users-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+}
+
+.admin-users-table th {
+  background-color: #3B82F6;
+  color: white;
+  font-weight: 500;
+}
+
+.admin-users-table td {
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+.admin-users-table tr:hover {
+  background-color: #f8fafc;
+}
+
+.clients-table-heading {
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.client-profile-image {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e2e8f0;
+  transition: transform 0.2s ease;
+}
+
+.client-profile-image:hover {
+  transform: scale(1.1);
+}
+
+/* Delete Button */
+.Aclient-delete-action-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  width: 100%;
+}
+
+.Aclient-delete-action-btn:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+}
+
+/* Tooltip Styling */
+.recharts-tooltip-wrapper {
+  background: white !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05) !important;
+  padding: 0.8rem !important;
+}
+
+.recharts-tooltip-label {
+  color: #475569 !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.recharts-legend-item-text {
+  color: #475569 !important;
+}

@@ -1,0 +1,121 @@
+.completed-projects-container {
+  
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.completed-projects-title {
+   font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(60, 60, 60);
+    margin-top: 2px;  /* Adjusted margin for space below the logo */
+    margin-bottom: 36px;
+    text-align: left;
+    padding-right: 120px !important;
+}
+
+.payments-table-container {
+    max-width: 1100px;       /* Limit table container width */
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.payments-table {
+    width: 100%;   
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.table-header-row {
+  background-color: #28a745;
+}
+
+.table-header {
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.table-data-row {
+  transition: background-color 0.2s ease;
+}
+
+.table-data-row:hover {
+  background-color: #f8f9fa;
+}
+
+.table-data-row:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.table-data-row:nth-child(even):hover {
+  background-color: #f1f3f5;
+}
+
+.table-data {
+  padding: 1rem 1.5rem;
+  color: #495057;
+  font-size: 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.job-title {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.freelancer-name {
+  color: #e67e22;
+  font-weight: 500;
+}
+
+.project-budget {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.payment-date {
+  color: #7f8c8d;
+}
+
+.loading-text {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  padding: 2rem;
+}
+
+.error-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #e74c3c;
+  padding: 2rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .completed-projects-container {
+    padding: 1rem;
+  }
+  
+  .completed-projects-title {
+    font-size: 2rem;
+  }
+  
+  .table-header {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .table-data {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}

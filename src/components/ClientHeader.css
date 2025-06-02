@@ -1,0 +1,175 @@
+.client-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000;
+}
+
+.client-header .logo img {
+    height: 50px;
+}
+
+.client-header nav {
+    display: flex;
+    align-items: center;
+}
+
+.client-header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.client-header .nav-links li {
+    font-size: 16px;
+}
+
+.client-header .nav-links li button {
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 40px;
+    background-color: transparent;
+    color: #000;
+    border: 0px solid #45a049;
+    cursor: pointer;
+    width: 100%;
+}
+
+.client-header .nav-links li button.active {
+    background-color: #45a049;
+    color: #fff;
+    border: 2px solid #45a049;
+}
+
+.client-header .nav-links li button:hover {
+    background-color: #3e8e41;
+    color: #fff;
+    border: 2px solid #3e8e41;
+    transition: none;
+}
+
+.profile-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #c2ecc3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.profile-circle .profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 270px;
+    height: 60%;
+    background-color: rgba(255, 255, 255, 0.557);
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.2);
+    padding: 30px 20px;
+    transition: right 0.4s ease-in-out;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(12px);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar h3 {
+    margin: 0;
+    padding: 10px 20px;
+    color: #2c3e50;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+    background: linear-gradient(90deg, #111511 0%, #3e8e41 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sidebar-link,
+.sidebar-logout {
+    width: 100%;
+    max-width: 220px;
+    padding: 12px 0;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Green Link Buttons */
+.sidebar-link {
+    background-color: rgba(69, 160, 73, 0.05);
+    border: 2px solid #45a049;
+    color: #45a049;
+}
+
+.sidebar-link:hover {
+    background-color: #45a049;
+    color: #fff;
+}
+
+/* Red Logout Button */
+.sidebar-logout {
+    background-color: rgba(231, 76, 60, 0.05);
+    border: 2px solid #e74c3c;
+    color: #e74c3c;
+}
+
+.sidebar-logout:hover {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
