@@ -14,7 +14,7 @@ const SubmitWork = ({ jobId }) => {
     formData.append("job_id", jobId);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/submit-work', formData);
+      const res = await axios.post('http://freelancer-platform-jmkm.onrender.com/api/submit-work', formData);
       setMessage(res.data.message);
     } catch (err) {
       console.error(err);
