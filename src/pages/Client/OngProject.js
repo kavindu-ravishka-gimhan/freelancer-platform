@@ -23,7 +23,7 @@ const OngoingProjects = () => {
     }
 
     setLoading(true);
-    axios.get(`http://localhost:5000/api/freelancer/ongoing-projects?freelancer_id=${freelancer_id}`)
+    axios.get(`http://freelancer-platform-jmkm.onrender.com/api/freelancer/ongoing-projects?freelancer_id=${freelancer_id}`)
       .then(response => {
         setProjects(response.data);
         setError(null);
@@ -64,7 +64,7 @@ const OngoingProjects = () => {
   };
   console.log('Submitting review data:', reviewData);  // Log the data
 
-  axios.post('http://localhost:5000/api/submit-review', reviewData)
+  axios.post('http://freelancer-platform-jmkm.onrender.com/api/submit-review', reviewData)
     .then(() => {
       setProjects(prev =>
         prev.map(p =>
