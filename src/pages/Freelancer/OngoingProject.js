@@ -13,7 +13,7 @@ const OngoingProjectClient = () => {
 
         const fetchProjects = async () => {
             try {
-                const res = await axios.get(`http://localhost:5000/api/client/ongoing-projects`, {
+                const res = await axios.get(`http://freelancer-platform-jmkm.onrender.com/api/client/ongoing-projects`, {
                     params: { client_id: clientId }
                 });
                 setProjects(res.data);
@@ -43,7 +43,7 @@ const OngoingProjectClient = () => {
             formData.append('file', file);
 
             const response = await axios.post(
-                `http://localhost:5000/api/submit-work/${projectId}`,
+                `http://freelancer-platform-jmkm.onrender.com/api/submit-work/${projectId}`,
                 formData,
                 { headers: { 'Content-Type': 'multipart/form-data' } }
             );
