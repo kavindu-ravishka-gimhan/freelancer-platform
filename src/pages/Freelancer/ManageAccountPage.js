@@ -48,7 +48,7 @@ const ManageAccountPage = () => {
         }
 
         try {
-            const res = await fetch(`http://localhost:5000/api/update-user-details`, {
+            const res = await fetch(`http://freelancer-platform-jmkm.onrender.com/api/update-user-details`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ userId, firstName, lastName, password })
@@ -77,7 +77,7 @@ const ManageAccountPage = () => {
         }
     
         try {
-            const res = await fetch(`http://localhost:5000/api/insert-education-details`, {
+            const res = await fetch(`http://freelancer-platform-jmkm.onrender.com/api/insert-education-details`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ freelancerId, shortBio, skills, degree, university, graduationYear })
@@ -113,7 +113,7 @@ const ManageAccountPage = () => {
             formData.append('profilePic', file);
             formData.append('userId', localStorage.getItem('id'));
 
-            const response = await fetch(`http://localhost:5000/api/upload-profile-pic`, {
+            const response = await fetch(`http://freelancer-platform-jmkm.onrender.com/api/upload-profile-pic`, {
                 method: 'POST',
                 body: formData
             });
