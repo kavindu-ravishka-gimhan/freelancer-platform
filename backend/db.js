@@ -2,10 +2,11 @@ const mysql = require('mysql2');
 require('dotenv').config();
 
 const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
+  host: 'mysql-2804ec4d-kavigimhan.j.aivencloud.com',
+  port: 23922,
+  user: 'avnadmin',
+  password: 'AVNS_WZu1hNCeVg5Atk8XFAp',
+  database: 'freelancer_web_app',
   multipleStatements: true,
   ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: true } : null
 });
