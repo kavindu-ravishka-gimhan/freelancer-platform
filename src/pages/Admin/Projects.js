@@ -60,8 +60,8 @@ const Projects = () => {
     const fetchProjects = async () => {
       try {
         const [ongoingRes, completedRes] = await Promise.all([
-          axios.get('http://localhost:5000/api/admin/ongoing-projects'),
-          axios.get('http://localhost:5000/completed-projects')
+          axios.get('http://freelancer-platform-jmkm.onrender.com/api/admin/ongoing-projects'),
+          axios.get('http://freelancer-platform-jmkm.onrender.com/completed-projects')
         ]);
 
         setOngoingProjects(ongoingRes.data);
