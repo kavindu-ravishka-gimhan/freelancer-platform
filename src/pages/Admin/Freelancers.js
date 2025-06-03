@@ -36,7 +36,7 @@ const Freelancers = () => {
   useEffect(() => {
     const fetchFreelancers = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/admin/freelancers');
+        const response = await axios.get('http://freelancer-platform-jmkm.onrender.com/admin/freelancers');
         setFreelancers(response.data);
       } catch (error) {
         console.error('Error fetching freelancers:', error);
@@ -51,7 +51,7 @@ const Freelancers = () => {
   const handleDeleteFreelancer = async (freelancerId) => {
     if (window.confirm('Are you sure you want to delete this freelancer?')) {
       try {
-        await axios.delete(`http://localhost:5000/admin/freelancers/${freelancerId}`);
+        await axios.delete(`http://freelancer-platform-jmkm.onrender.com/admin/freelancers/${freelancerId}`);
         setFreelancers(prev => prev.filter(f => f.id !== freelancerId));
       } catch (error) {
         console.error('Delete error:', error);
