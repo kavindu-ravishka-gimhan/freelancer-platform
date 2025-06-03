@@ -16,7 +16,7 @@ const ClientHeader = () => {
 
         const storedProfilePic = localStorage.getItem('profilePic');
         if (storedProfilePic) {
-            const backendUrl = 'http://localhost:5000';
+            const backendUrl = 'freelancer-platform-jmkm.onrender.com';
             const fullUrl = storedProfilePic.startsWith('/uploads')
                 ? `${backendUrl}${storedProfilePic}`
                 : storedProfilePic;
