@@ -27,7 +27,7 @@ const CheckoutForm = ({ project, stripeAccountId, freelancerId, clientId }) => {
         throw new Error('Invalid project budget format');
       }
 
-      const { data } = await axios.post('http://localhost:5000/create-payment-intent', {
+      const { data } = await axios.post('http://freelancer-platform-jmkm.onrender.com/create-payment-intent', {
         amount: amountCents,
         freelancerStripeId: stripeAccountId
       });
@@ -46,7 +46,7 @@ const CheckoutForm = ({ project, stripeAccountId, freelancerId, clientId }) => {
         console.log('PaymentIntent:', result.paymentIntent);
 
         // Save payment info
-          await axios.post('http://localhost:5000/api/save-payment-details', {
+          await axios.post('http://freelancer-platform-jmkm.onrender.com/api/save-payment-details', {
           job_id: project.job_id,
           freelancer_id: freelancerId,
           client_id: clientId,
@@ -100,7 +100,7 @@ const MakePayment = () => {
       return;
     }
 
-    axios.get('http://localhost:5000/api/freelancer/stripe-account', {
+    axios.get('http://freelancer-platform-jmkm.onrender.com/api/freelancer/stripe-account', {
       params: { freelancerId }
     })
     .then((res) => {
