@@ -10,7 +10,7 @@ const CompletedProjects = () => {
   useEffect(() => {
     const clientId = localStorage.getItem('id');
 
-    axios.get(`http://localhost:5000/api/payments?client_id=${clientId}`)
+    axios.get(`http://freelancer-platform-jmkm.onrender.com/api/payments?client_id=${clientId}`)
       .then(res => {
         setPayments(res.data);
         setLoading(false);
