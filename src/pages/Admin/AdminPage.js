@@ -34,7 +34,7 @@ const AdminPage = () => {
       }
 
       try {
-        await axios.get('http://localhost:5000/admin/data', {
+        await axios.get('http://freelancer-platform-jmkm.onrender.com/admin/data', {
           headers: { Authorization: `Bearer ${token}` }
         });
         // You can log or use the response if needed
