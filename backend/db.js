@@ -1,6 +1,11 @@
 const mysql = require('mysql2');
 require('dotenv').config();
 
+const caCert = process.env.MYSQL_SSL_CA;
+
+
+const formattedCaCert = caCert.replace(/\\n/g, '\n');
+
 const db = mysql.createConnection({
   host: 'mysql-2804ec4d-kavigimhan.j.aivencloud.com',
   port: 23922,
@@ -8,7 +13,8 @@ const db = mysql.createConnection({
   password: 'AVNS_WZu1hNCeVg5Atk8XFAp',
   database: 'freelancer_web_app',
   multipleStatements: true,
-  ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: true } : null
+  ssl: {
+    ca: formattedCaCert}
 });
 
 db.connect((err) => {
