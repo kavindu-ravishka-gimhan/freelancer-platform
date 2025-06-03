@@ -17,7 +17,7 @@ const ApplicantDetailsPage = () => {
     useEffect(() => {
         const fetchDetails = async () => {
             try {
-                const res = await fetch(`http://localhost:5000/api/freelancer-details/${clientId}`);
+                const res = await fetch(`http://freelancer-platform-jmkm.onrender.com/api/freelancer-details/${clientId}`);
                 if (!res.ok) throw new Error(await res.text());
                 const data = await res.json();
                 setFreelancerDetails(data);
@@ -28,7 +28,7 @@ const ApplicantDetailsPage = () => {
 
         const fetchReviews = async () => {
             try {
-                const res = await fetch(`http://localhost:5000/api/freelancer-reviews/${clientId}`);
+                const res = await fetch(`http://freelancer-platform-jmkm.onrender.com/api/freelancer-reviews/${clientId}`);
                 if (!res.ok) throw new Error(await res.text());
                 const data = await res.json();
                 setReviews(data);
@@ -48,7 +48,7 @@ const ApplicantDetailsPage = () => {
     if (!freelancerId) return alert('Freelancer ID not found');
 
     try {
-        const res = await fetch('http://localhost:5000/api/hire-client', {
+        const res = await fetch('http://freelancer-platform-jmkm.onrender.com/api/hire-client', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ jobId, clientId, freelancerId }),
