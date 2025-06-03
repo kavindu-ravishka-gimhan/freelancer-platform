@@ -37,7 +37,7 @@ const UpdateJob = () => {
       
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/jobs?freelancer_id=${localStorage.getItem('id')}`)
+        fetch(`http://freelancer-platform-jmkm.onrender.com/api/jobs?freelancer_id=${localStorage.getItem('id')}`)
             .then(res => res.json())
             .then(data => {
                 const selectedJob = data.find(j => j.id === parseInt(id));
@@ -62,7 +62,7 @@ const UpdateJob = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch(`http://localhost:5000/api/jobs/${id}`, {
+            const res = await fetch(`http://freelancer-platform-jmkm.onrender.com/api/jobs/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
