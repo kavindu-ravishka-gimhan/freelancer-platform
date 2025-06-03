@@ -68,15 +68,9 @@ app.post('/signin', (req, res) => {
 
     // Admin login
     if (email === Admin && password === Admin_Password) {
-        const token = jwt.sign(
-            { role: 'Admin' },
-            process.env.JWT_SECRET,
-            { expiresIn: '1h' }
-        );
         return res.json({
             message: 'Admin login successful',
             role: 'Admin',
-            token: token,
             id: 'admin-id'
         });
     }
@@ -100,7 +94,6 @@ app.post('/signin', (req, res) => {
         });
     });
 });
-
 // Protected Admin Route
 app.get('/admin/data', verifyAdmin, (req, res) => {
     // Example admin data
