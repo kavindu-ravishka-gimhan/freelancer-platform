@@ -13,7 +13,7 @@ const SignIn = () => {
     e.preventDefault();
 
     try {
-        const response = await axios.post('http://localhost:5000/signin', { email, password });
+        const response = await axios.post('https://freelancer-platform-jmkm.onrender.com/signin', { email, password });
         
         // Store user data
         localStorage.setItem('role', response.data.role);
