@@ -31,7 +31,7 @@ const Signup = () => {
         }
 
         try {
-            const response = await axios.post(`${process.env.REACT_APP_API_URL}/signup`, formData);
+            const response = await axios.post('https://freelancer-platform-jmkm.onrender.com/signup', formData);
             setSuccessMessage(response.data.message);
             setErrorMessage('');
         } catch (error) {
