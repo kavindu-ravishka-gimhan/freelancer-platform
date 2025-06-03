@@ -15,7 +15,7 @@ const SeeApplicantsPage = () => {
     useEffect(() => {
         const fetchJobTitle = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/job-title/${jobId}`);
+                const response = await fetch(`http://freelancer-platform-jmkm.onrender.com/api/job-title/${jobId}`);
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 const data = await response.json();
                 setJobTitle(data.title);
@@ -26,7 +26,7 @@ const SeeApplicantsPage = () => {
 
         const fetchApplicants = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/job_applications/${jobId}`);
+                const response = await fetch(`http://freelancer-platform-jmkm.onrender.com/job_applications/${jobId}`);
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 const data = await response.json();
                 setApplicants(data);
@@ -56,7 +56,7 @@ const SeeApplicantsPage = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:5000/api/hire-client', {
+            const response = await fetch('http://freelancer-platform-jmkm.onrender.com/api/hire-client', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ jobId, clientId, freelancerId }),
