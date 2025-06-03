@@ -129,7 +129,7 @@ const OngoingProjects = () => {
                   Uploaded Work {
                     project.submitted_work ? (
                       <a
-                        href={`http://localhost:5000/uploads/${project.submitted_work}`}
+                        href={`http://https://freelancer-platform-jmkm.onrender.com/uploads/${project.submitted_work}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         download

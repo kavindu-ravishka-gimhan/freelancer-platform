@@ -8,7 +8,7 @@ const MyProfilePage = () => {
   const [averageRating, setAverageRating] = useState(null);
   const [loading, setLoading] = useState(true);
   const [profilePic, setProfilePic] = useState('');
-  const backendUrl = 'freelancer-platform-jmkm.onrender.com';
+  const backendUrl = 'https://freelancer-platform-jmkm.onrender.com';
 
   useEffect(() => {
     const freelancerId = localStorage.getItem('id');

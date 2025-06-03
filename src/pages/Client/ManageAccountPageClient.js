@@ -77,7 +77,7 @@ const ManageAccountPageClient = () => {
 
             const data = await response.json();
             if (data.success) {
-                const fullUrl = `http://localhost:5000${data.filePath}`;
+                const fullUrl = `https://freelancer-platform-jmkm.onrender.com${data.filePath}`;
                 localStorage.setItem('profilePic', fullUrl);
                 setProfilePic(`${fullUrl}?t=${Date.now()}`);
                 showMessage('Profile picture updated successfully!', 'success');
