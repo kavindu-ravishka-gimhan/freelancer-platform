@@ -25,7 +25,7 @@ const CreateNewJobs = () => {
         const jobData = { ...jobDetails, freelancer_id };
     
         try {
-            const response = await fetch('http://localhost:5000/post-job', {
+            const response = await fetch('http://freelancer-platform-jmkm.onrender.com/post-job', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
