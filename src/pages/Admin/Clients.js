@@ -36,7 +36,7 @@ const Clients = () => {
   useEffect(() => {
     const fetchClients = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/admin/clients');
+        const response = await axios.get('http://freelancer-platform-jmkm.onrender.com/admin/clients');
         setClients(response.data);
       } catch (error) {
         console.error('Error fetching clients:', error);
@@ -51,7 +51,7 @@ const Clients = () => {
   const handleDeleteClient = async (clientId) => {
     if (window.confirm('Are you sure you want to delete this client?')) {
       try {
-        await axios.delete(`http://localhost:5000/admin/clients/${clientId}`);
+        await axios.delete(`http://freelancer-platform-jmkm.onrender.com/admin/clients/${clientId}`);
         setClients(clients.filter(client => client.id !== clientId));
       } catch (error) {
         console.error('Delete error:', error);
