@@ -39,7 +39,7 @@ const ClientPage = () => {
 
    const fetchJobs = async (freelancerId) => {
     try {
-        const response = await fetch(`http://localhost:5000/api/jobsClient?freelancer_id=${freelancerId}`);
+        const response = await fetch(`http://freelancer-platform-jmkm.onrender.com/api/jobsClient?freelancer_id=${freelancerId}`);
         const data = await response.json();
         setJobs(data);
     } catch (err) {
@@ -49,7 +49,7 @@ const ClientPage = () => {
 
     const handleDelete = async () => {
     try {
-        const response = await fetch(`http://localhost:5000/api/jobs/${selectedJobId}`, {
+        const response = await fetch(`http://freelancer-platform-jmkm.onrender.com/api/jobs/${selectedJobId}`, {
             method: 'DELETE',
         });
 
