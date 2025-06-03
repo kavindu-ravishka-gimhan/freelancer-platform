@@ -18,7 +18,7 @@ const AddPaymentDetails = () => {
     }
 
     axios
-      .get('http://localhost:5000/api/freelancer/stripe-status', {
+      .get('http://freelancer-platform-jmkm.onrender.com/api/freelancer/stripe-status', {
         params: { freelancerId },
       })
       .then((res) => {
@@ -36,7 +36,7 @@ const AddPaymentDetails = () => {
   const handleAddPayment = async () => {
     try {
       const res = await axios.get(
-        'http://localhost:5000/api/freelancer/add-payment-details',
+        'http://freelancer-platform-jmkm.onrender.com/api/freelancer/add-payment-details',
         {
           params: { freelancerId },
         }
