@@ -67,14 +67,14 @@ const FreelancerPage = () => {
   const clientId = localStorage.getItem('id');
 
   const fetchJobs = useCallback(() => {
-    axios.get('http://localhost:5000/api/jobs')
+    axios.get('http://freelancer-platform-jmkm.onrender.com/api/jobs')
       .then(res => setJobs(res.data))
       .catch(err => console.error('Error fetching jobs:', err));
   }, []);
 
   const fetchAppliedJobs = useCallback(() => {
     if (!clientId) return;
-    axios.get(`http://localhost:5000/applied-jobs/${clientId}`)
+    axios.get(`http://freelancer-platform-jmkm.onrender.com/applied-jobs/${clientId}`)
       .then(res => setAppliedJobs(res.data.map(job => job.job_id)))
       .catch(err => console.error('Error fetching applied jobs:', err));
   }, [clientId]);
@@ -93,7 +93,7 @@ const FreelancerPage = () => {
   };
 
   const handleConfirmApply = (job) => {
-    axios.post('http://localhost:5000/api/apply', {
+    axios.post('http://freelancer-platform-jmkm.onrender.com/api/apply', {
       client_id: clientId,
       job_id: job.id,
     })
@@ -118,7 +118,7 @@ const FreelancerPage = () => {
   };
 
   const handleFilter = () => {
-    axios.get('http://localhost:5000/api/jobs', {
+    axios.get('http://freelancer-platform-jmkm.onrender.com/api/jobs', {
       params: {
         category: selectedCategory,
         budget: selectedBudget,
