@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { useNavigate, NavLink, Outlet } from 'react-router-dom';
 import {
   FaHome,
@@ -19,37 +18,16 @@ const AdminPage = () => {
     { name: 'clients', icon: <FaUserTie />, label: 'Clients' },
     { name: 'freelancers', icon: <FaUserTie />, label: 'Freelancers' },
     { name: 'projects', icon: <FaProjectDiagram />, label: 'Projects' },
-    
   ];
 
   useEffect(() => {
-    const verifyAdminAccess = async () => {
-      const token = localStorage.getItem('adminToken');
-      const role = localStorage.getItem('role');
-
-      if (!token || role !== 'Admin') {
-        localStorage.removeItem('adminToken');
-        navigate('/signin');
-        return;
-      }
-
-      try {
-        await axios.get('http://freelancer-platform-jmkm.onrender.com/admin/data', {
-          headers: { Authorization: `Bearer ${token}` }
-        });
-        // You can log or use the response if needed
-      } catch (error) {
-        console.error('Admin access error:', error);
-        localStorage.removeItem('adminToken');
-        navigate('/signin');
-      }
-    };
-
-    verifyAdminAccess();
+    const role = localStorage.getItem('role');
+    if (role !== 'Admin') {
+      navigate('/signin');
+    }
   }, [navigate]);
 
   const handleLogout = () => {
-    localStorage.removeItem('adminToken');
     localStorage.removeItem('role');
     navigate('/signin');
   };
